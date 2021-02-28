@@ -21,6 +21,17 @@
   @media (min-width: $min-desktop) {
     width: 80%;
   }
+
+  a:hover,
+  a:focus {
+    color: $color-basic-accent;
+    border-color: $color-basic-accent;
+  }
+
+  a:active {
+    color: $color-other-accent;
+    border-color: $color-other-accent;
+  }
 }
 
 .goods__list {

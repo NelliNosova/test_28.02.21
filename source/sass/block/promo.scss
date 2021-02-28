@@ -31,6 +31,17 @@
       background-size: auto;
     }
   }
+
+  a:hover,
+  a:focus {
+    color: $color-basic-accent;
+    border-color: $color-basic-accent;
+  }
+
+  a:active {
+    color: $color-other-accent;
+    border-color: $color-other-accent;
+  }
 }
 
 .promo__wrapper {
@@ -60,6 +71,7 @@
 .promo__title {
   @include zero;
 
+  position: relative;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: -0.5px;
@@ -79,6 +91,22 @@
     font-weight: 600;
     font-size: 40px;
     line-height: 38px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: $color-basic-black;
+
+    @media (min-width: $min-desktop) {
+      top: -30px;
+      width: 3px;
+      height: 25px;
+    }
   }
 }
 
