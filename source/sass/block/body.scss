@@ -1,0 +1,33 @@
+.body {
+  @include zero;
+
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.body__nav {
+  display: none;
+
+  @media (min-width: $min-lg-tablet) {
+    display: block;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 25%;
+  }
+
+  @media (min-width: $mid-desktop) {
+    width: 20%;
+  }
+}
+
+.body__main {
+  margin-bottom: 40px;
+
+  @media (min-width: $min-desktop) {
+    @include padding(40px);
+    display: flex;
+  }
+}

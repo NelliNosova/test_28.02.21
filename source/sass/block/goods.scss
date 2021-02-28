@@ -1,0 +1,124 @@
+.goods {
+  @include padding (20px);
+
+  margin-top: 15px;
+
+  @media (min-width: $min-lg-phone) {
+    margin-top: 35px;
+  }
+
+  @media (min-width: $min-tablet) {
+    margin-top: 55px;
+  }
+
+  @media (min-width: $min-desktop) {
+    @include padding(0);
+
+    width: 75%;
+    margin-top: 35px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 80%;
+  }
+}
+
+.goods__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media (min-width: $min-desktop) {
+    @include padding(30px);
+
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: 1fr;
+  }
+
+  @media (min-width: $mid-desktop) {
+    @include padding(40px);
+
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+}
+
+.goods__promo-photo {
+  display: none;
+
+  @media (min-width: $min-desktop) {
+    display: block;
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: $mid-desktop) {
+    width: 100%;
+  }
+}
+
+.goods__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+  margin-bottom: 35px;
+
+  @media (min-width: $min-lg-phone) {
+    width: 40%;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $min-tablet) {
+    width: 30%;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media (min-width: $mid-desktop) {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.goods__link {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+  padding: 6px 10px;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 12px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid $color-basic-black;
+  text-align: center;
+
+  @media (min-width: $min-lg-phone) {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+
+  @media (min-width: $min-tablet) {
+    padding: 15px 15px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $min-desktop) {
+    font-weight: 400;
+  }
+}

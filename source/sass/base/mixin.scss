@@ -1,0 +1,14 @@
+@mixin zero {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin size ($width: 20px, $height: 20px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin padding ($padding: 20px) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
